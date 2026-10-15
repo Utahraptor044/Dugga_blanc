@@ -1,4 +1,3 @@
-import sys
 import pandas as pd
 import csv
 import argparse
@@ -53,7 +52,6 @@ print(head_data)
 ######################################""
 ### exo c.
 
-from plotnine import ggplot, aes, geom_point, ggtitle, xlab, ylab, geom_smooth, theme, element_text
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -69,8 +67,8 @@ plot_data = head_data.dropna(subset=[6, 7])
 #create an empty figure
 plt.figure(figsize=(8, 6))
 # Create the datas. 
-plt.scatter(plot_data[0], plot_data[6], color='blue', marker='o', label="TPM unstranded")
-plt.scatter(plot_data[0], plot_data[7], color='red', marker='x', label="FPKM unstranded")
+plt.scatter(plot_data[1], plot_data[6], color='blue', marker='o', label="TPM unstranded")
+plt.scatter(plot_data[1], plot_data[7], color='red', marker='x', label="FPKM unstranded")
 plt.title("Comparition between two normalisation methods :\n TPM (transcript per milion) and FPKM (Fragment per Kilobase Milion)")
 plt.xlabel("Gene name")
 plt.ylabel("Per milions")
